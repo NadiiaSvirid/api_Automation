@@ -35,7 +35,7 @@ export function createRandomUser(){
 }
 
 //Signup user (Promis async/await)
-export function signUp(user:User): Promise<any> {
+export function signUp(user:User):Promise<any> {
     return new Promise((resolve, reject) => {
         request
         .post('/users/signup')
@@ -47,7 +47,7 @@ export function signUp(user:User): Promise<any> {
     }); 
 };
 
-export function signUp2(user:User):Promise<any> {
+export function signUp2(user:User) {
     return request
     .post('/users/signup')
     .send(user)
@@ -66,14 +66,14 @@ export function login(user:User):Promise<any> {
     })
 }
 
-export function login2(user:User):Promise<any> {
+export function login2(user:User) {
     return request
     .post('/users/login')
     .send(user)
     .expect(200)
 }
 
-export function deleteFunction(cookie:string): Promise<any> {
+export function deleteFunction(cookie:string):Promise<any> {
     return new Promise((resolve, reject) => {
         request
         .delete('/users/deleteMe')
@@ -85,7 +85,7 @@ export function deleteFunction(cookie:string): Promise<any> {
     })
 }
 
-export function deleteFunction2(cookie:string):Promise<any> {
+export function deleteFunction2(cookie:string) {
     return request
     .delete('/users/deleteMe')
     .set('Cookie', cookie) // Set the cookie for authentication
