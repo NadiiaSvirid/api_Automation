@@ -1,5 +1,5 @@
-import { User } from "./helper/interface";
-import { deleteFunction, deleteFunction2, getUser, login, login2, signUp, signUp2 } from "./helper/user";
+import { User } from "../../helper/interface";
+import { deleteFunction, deleteFunction2, getUser, login, login2, signUp, signUp2 } from "../../helper/user";
 import * as supertest from 'supertest';
 const request = supertest("http://localhost:8001/api/v1");
 

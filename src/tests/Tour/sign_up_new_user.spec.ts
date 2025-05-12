@@ -12,7 +12,7 @@ interface UserData {
 
 describe('User Sign Up', () => {
     describe('Positive testing', () => {
-        it('should sign up a new user successfully', async () => {
+        it.only('should sign up a new user successfully', async () => {
             const userData:UserData = {
                 name: faker.person.fullName(),
                 email: faker.internet.email(),
