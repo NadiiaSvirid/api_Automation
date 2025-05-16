@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="6.997">
-  <testsuite name="Create Tour" errors="0" failures="0" skipped="0" timestamp="2025-05-12T02:22:24" time="6.233" tests="1">
-    <testcase classname="Create Tour should create a user successfully" name="Create Tour should create a user successfully" time="0.779">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="6.546">
+  <testsuite name="POSTS" errors="0" failures="0" skipped="0" timestamp="2025-05-16T02:09:26" time="5.805" tests="6">
+    <testcase classname="POSTS get request" name="POSTS get request" time="0.248">
+    </testcase>
+    <testcase classname="POSTS POST request" name="POSTS POST request" time="0.102">
+    </testcase>
+    <testcase classname="POSTS PATCH request with title version 1" name="POSTS PATCH request with title version 1" time="0.148">
+    </testcase>
+    <testcase classname="POSTS PATCH request with title version 2" name="POSTS PATCH request with title version 2" time="0.135">
+    </testcase>
+    <testcase classname="POSTS PATCH request with title version 3" name="POSTS PATCH request with title version 3" time="0.11">
+    </testcase>
+    <testcase classname="POSTS DELETE request" name="POSTS DELETE request" time="0.102">
     </testcase>
   </testsuite>
 </testsuites>
