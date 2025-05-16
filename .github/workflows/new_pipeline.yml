@@ -1,0 +1,45 @@
+name: Cross-platform CI Pipeline
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Запускается каждый день в 00:00 по UTC
+  workflow_dispatch:     # Запуск вручную из GitHub
+
+jobs:
+  test-windows:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        node-version: [18, 20]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+  test-macos:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        node-version: [18, 20]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
